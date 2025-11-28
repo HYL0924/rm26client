@@ -1,0 +1,5 @@
+{
+  "name": "RoboMaster Custom Client 2026",
+  "description": "A high-performance custom client for RoboMaster 2026, featuring a customizable HUD, real-time status monitoring, and mini-map visualization.",
+  "requestFramePermissions": []
+}
