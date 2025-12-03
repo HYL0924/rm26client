@@ -65,7 +65,10 @@ export class RoboMasterClient {
             console.log('Protobuf definitions loaded successfully');
 
             // DYNAMIC PROTOCOL SELECTION FIX
+            // Use WSS if page is HTTPS to avoid Mixed Content Blocking
             const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
+            // Note: This assumes the server/proxy supports WSS on the same port + 1
+            // or is handled by an Nginx proxy.
             const connectUrl = `${protocol}://${SERVER_IP}:${SERVER_PORT + 1}`; 
             
             console.log(`Connecting to RoboMaster Server at ${connectUrl}`);
